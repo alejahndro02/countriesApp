@@ -18,7 +18,11 @@
     "module": "es2020",
     "paths":{
       "@pais/*":["src/app/pais/*"],
-      "@shared/*":["src/app/shared/*"]
+      "@shared/*":["src/app/shared/*"],
+      "@components/*":["src/app/pais/components/*"],
+      "@interfaces/*":["src/app/pais/interfaces/*"],
+      "@pages/*":["src/app/pais/pages/*"],
+      "@services/*":["src/app/pais/services/*"],
     },
     "lib": [
       "es2018",
