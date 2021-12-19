@@ -1,12 +1,6 @@
 <div class="row container mt-4">
     <div class="col-3">
-        <h2>{{"busqueda"|uppercase}}</h2>
-        <ul class="list-group">
-            <!-- [routerLinkActiveOptions] unicamente aplica si el path del routerlink esta vacio  -->
-            <li routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" class="list-group-item text-center">{{"Buscar Pais"}}</li>
-            <li routerLink="region" routerLinkActive="active" class="list-group-item text-center">{{"Por Region"}}</li>
-            <li routerLink="capital" routerLinkActive="active" class="list-group-item text-center">{{"Por Capital"}}</li>
-        </ul>
+        <app-sidebar></app-sidebar>
     </div>
     <div class="col">
         <router-outlet></router-outlet>
