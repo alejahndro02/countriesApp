@@ -26,4 +26,9 @@ export class PorPaisComponent  {
       this.paises=[]
     });
   }
+  sugerencia(palabra:string){
+    console.log('algo');
+    this.hayError = false
+    // this.palabra = palabra
+  }
 }
