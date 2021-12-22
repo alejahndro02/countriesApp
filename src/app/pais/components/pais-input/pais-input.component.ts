@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, Input } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
 
@@ -16,6 +16,8 @@ export class PaisInputComponent implements OnInit  {
 @Output() onEnter: EventEmitter<string> = new EventEmitter();
 //este evento se ejecuta cuando dejamos de teclear 
 @Output() onDebounce: EventEmitter<string> = new EventEmitter();
+
+@Input() placeholder:string = '';
 
 //se crea un observable tipo Subject
 debouncer: Subject<string> = new Subject();
@@ -36,7 +38,7 @@ buscar(){
   this.onEnter.emit(this.palabra)
 
 }
-teclaPrecionada(){
+teclaPresionada(){
   this.debouncer.next(this.palabra)
 }
 
