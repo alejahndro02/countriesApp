@@ -20,6 +20,10 @@ export class PaisService {
     const url = `${this.countrieUrl}/capital/${palabra}`
     return this.http.get<Country[]>(url);
   }
+  buscarRegion(region:string):Observable<Country[]>{
+    const url = `${this.countrieUrl}/region/${region}`
+    return this.http.get<Country[]>(url);
+  }
   getPaisCode(id:string):Observable<Country>{
     const url = `${this.countrieUrl}/alpha/${id}`
     return this.http.get<Country>(url);
