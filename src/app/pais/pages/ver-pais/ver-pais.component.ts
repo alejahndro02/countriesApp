@@ -20,18 +20,16 @@ export class VerPaisComponent implements OnInit {
 
     this.activateRoute.params
     .pipe(
-      switchMap(({ id })=> this.paisService.getPaisCode( id )),
+      switchMap(({ id })=> this.paisService.getPaisCode( id )), 
       tap(console.log)
     )
     .subscribe( pais => {
       this.pais = pais[0];
-      this.iterarBadgesKey();
-      // this.trasnslationLanguage();
+      this.iterarBadges();
     });
   };
-iterarBadgesKey(){
+iterarBadges(){
       this.translationslanguages = Object.keys( this.pais.translations )
-      console.log('nenanena', this.translationslanguages);
 };
 trasnslationLanguage(){
   const {translations} = this.pais;
